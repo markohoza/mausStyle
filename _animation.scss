@@ -1,0 +1,153 @@
+// main: master.scss
+/*animation ---------------------------------------------------------------------------------------------------- animation */
+.ani,
+a, a:visited, a:focus {
+    -webkit-transition: color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    transition: color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease;
+    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease, -webkit-filter 2s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+}
+.aniScale {
+    display: block;
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    &:hover, &:focus {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.onScreenAnimation .aniFadeIn {
+    opacity: 0;
+}
+.onScreenAnimation.play .aniFadeIn {
+    -webkit-animation-name: aniFadeIn;
+    animation-name: aniFadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes aniFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes aniFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.onScreenAnimation .aniSlideInLeft {
+    left: -100vw;
+    position: relative;
+}
+.onScreenAnimation.play .aniSlideInLeft {
+    -webkit-animation-name: aniSlideInLeft;
+    animation-name: aniSlideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes aniSlideInLeft {
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+@keyframes aniSlideInLeft {
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+.onScreenAnimation .aniSlideInRight {
+    right: -100vw;
+    position: relative;
+}
+.hamburger.open,
+.onScreenAnimation.play .aniSlideInRight {
+    -webkit-animation-name: aniSlideInRight;
+    animation-name: aniSlideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes aniSlideInRight {
+    0% {
+        right: -100vw;
+    }
+    100% {
+        right: 0vw;
+    }
+}
+@keyframes aniSlideInRight {
+    0% {
+        right: -100vw;
+    }
+    100% {
+        right: 0vw;
+    }
+}
+.onScreenAnimation .aniPlop {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+}
+.onScreenAnimation.play .aniPlop {
+    -webkit-animation-name: aniPlop;
+    animation-name: aniPlop;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes aniPlop {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes aniPlop {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+/* end.animation*/

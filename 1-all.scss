@@ -1,0 +1,98 @@
+// main: master.scss
+/*1 all */ @media (min-width: 1px) { /*-------------------------------------------------------------------------------- all*/
+main {
+    min-height: calc(100vh - 300px);
+}
+header {
+
+}
+footer {
+
+}
+.btn,
+button,
+input[type="submit"] {
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    padding: 10px !important;
+    border-radius: 0;
+    color: #fff !important;
+    background-color: $color-base !important;
+    background-image: none !important;
+    white-space: nowrap;
+    &:hover, &:focus {
+        background-color: lighten( $color-base, 20%) !important;
+    }
+}
+.woocommerce .quantity input.qty,
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+    color: $color-text !important;
+    background-color: transparent;
+    padding: 0.7em;
+    font-size: 1em;
+    width: 100%;
+    border-color: transparent;
+    border-bottom: 1px solid $color-alt;
+    &:hover, &:focus {
+        border-bottom: 1px solid $color-base;
+        background-color: transparent;
+    }
+    &:focus {
+        outline: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background: rgba($color-base,0.2);
+    }
+}
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+/*scrollbar*/
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #bfbfbf;
+        border: 0px none #ffffff;
+        border-radius: 0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #bfbfbf;
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background: $color-base;
+    }
+    ::-webkit-scrollbar-track {
+        background: #666666;
+        border: 0px none #ffffff;
+        border-radius: 0px;
+    }
+    ::-webkit-scrollbar-track:hover {
+        background: #666666;
+    }
+    ::-webkit-scrollbar-track:active {
+        background: #333333;
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}/* end.all*/
