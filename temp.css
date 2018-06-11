@@ -570,6 +570,29 @@ p, a, label {
     main {
         min-height: calc(100vh - 300px);
     }
+    #backToTop {
+        position: fixed;
+        background-color: #ff0000;
+        width: 40px;
+        height: 40px;
+        display: block;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 50%;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 100;
+    }
+    #backToTop.view {
+        visibility: visible;
+        opacity: 1;
+    }
+    #backToTop:hover svg, #backToTop:focus svg {
+        margin-top: -5px;
+    }
     .btn,
     button,
     input[type="submit"] {
