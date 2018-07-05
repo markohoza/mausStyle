@@ -455,7 +455,6 @@ a:hover {
 }
 
 input, button, textarea {
-    background-color: #fff;
     border: none;
 }
 
@@ -501,8 +500,13 @@ body {
     overflow-x: hidden;
 }
 
-*[type="hidden"] {
+*[type="hidden"],
+.hide {
     display: none;
+}
+
+object {
+    pointer-events: none;
 }
 
 .clearfix {
@@ -546,12 +550,10 @@ input:focus, textarea:focus {
 /* end.colors */
 /*fonts ------------------------------------------------------------------------------------------------------------ fonts */
 p, a, label, body {
-    font-family: 'Nobile', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Roboto Condensed', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -749,14 +751,13 @@ p, a, label {
 /*animation ---------------------------------------------------------------------------------------------------- animation */
 .ani,
 a, a:visited, a:focus {
-    -webkit-transition: color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
-    transition: color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
-    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease;
-    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
-    transition: filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease, -webkit-filter 2s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    -webkit-transition: fill 0.5s, color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    transition: fill 0.5s, color 0.5s, background 0.5s, background-color 0.5s, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
+    transition: fill 0.5s, filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease;
+    transition: fill 0.5s, filter 1s, color 0.5s, background 0.5s, background-color 0.5s, box-shadow 0.5s, transform 0.5s ease, -webkit-filter 1s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s ease;
 }
 
-.aniScale {
+.hoverScale {
     display: block;
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
@@ -766,7 +767,7 @@ a, a:visited, a:focus {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.aniScale:hover, .aniScale:focus {
+.hoverScale:hover, .hoverScale:focus {
     -webkit-transform: scale(1);
     transform: scale(1);
 }

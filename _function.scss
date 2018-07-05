@@ -86,7 +86,6 @@
         text-decoration: none;
     }
     input, button, textarea {
-        background-color: #fff;
         border: none;
     }
     html {
@@ -122,8 +121,12 @@
     body {
         overflow-x: hidden;
     }
-    *[type="hidden"] {
+    *[type="hidden"],
+    .hide {
         display: none;
+    }
+    object {
+        pointer-events: none;
     }
 }
 @if ($debug) {
