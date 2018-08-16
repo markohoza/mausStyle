@@ -7,6 +7,8 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Nobile");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
     line-height: 1.15;
     /* 1 */
@@ -509,6 +511,19 @@ object {
     pointer-events: none;
 }
 
+body.disableScroll {
+    overflow-y: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-right: 10px;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .clearfix {
     *zoom: 1;
 }
@@ -748,6 +763,12 @@ p, a, label {
 }
 
 /* end.special*/
+/*low display */
+@media (max-height: 600px) {
+    /*--------------------------------------------------------------- low display*/
+}
+
+/* end.special*/
 /*animation ---------------------------------------------------------------------------------------------------- animation */
 .ani,
 a, a:visited, a:focus {
@@ -765,6 +786,7 @@ a, a:visited, a:focus {
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
 }
 
 .hoverScale:hover, .hoverScale:focus {

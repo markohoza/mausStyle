@@ -128,6 +128,17 @@
     object {
         pointer-events: none;
     }
+    body.disableScroll {
+        overflow-y: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-right: 10px;
+    }
+    .disable {
+        pointer-events: none;
+        opacity: 0.5;
+    }
 }
 @if ($debug) {
     * {

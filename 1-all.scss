@@ -1,5 +1,11 @@
 // main: master.scss
 /*1 all */ @media (min-width: 1px) { /*-------------------------------------------------------------------------------- all*/
+$container: 200px;
+$separator: 100px;
+$headerHeight: 170px;
+
+@import "1A-all";
+
 main {
     min-height: calc(100vh - 300px);
 }

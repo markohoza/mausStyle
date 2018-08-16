@@ -15,6 +15,7 @@ a, a:visited, a:focus {
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
     &:hover, &:focus {
         -webkit-transform: scale(1);
         transform: scale(1);
